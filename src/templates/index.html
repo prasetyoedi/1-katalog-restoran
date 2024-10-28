@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Restaurant Apps</title>
-  </head>
-  <body>
-    <h1>Restaurant Apps Starter Project</h1>
-    <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-    <p>
-      Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros
-      sebagai background hero elemen.
-    </p>
-    <img src="./images/heros/hero-image_1.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_3.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_4.jpg" width="450" alt="" />
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunger Apps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-to-content">Skip to Content</a>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="navbar-brand">Hunger Apps</div>
+      <div class="navbar-links" id="navbarLinks">
+        <a href="index.html">Home</a>
+        <a href="#">Favorit</a>
+        <a href="https://linkedin.com">About Us</a>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-label="Hero Section">
+    <h2>Discover Your Favorite Restaurant</h2>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <section class="explore" aria-labelledby="explore-heading">
+      <h2 id="explore-heading">Explore Restaurant</h2>
+      <div class="restaurant-list" id="restaurant-list"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>Copyright © 2024 - Hunger Apps</p>
+    <p>Contact Us: info@hungerapps.com</p>
+  </footer>
+
+  <script src="../scripts/index.js"></script>
+  <script>
+    function toggleMenu() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+    }
+  </script>
+</body>
+
 </html>
